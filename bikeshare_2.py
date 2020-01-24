@@ -227,15 +227,15 @@ def main():
         trip_duration_stats(df)
         user_stats(df, city)
 
-        startrow = 0
+        start_row = 0
         endrow = 5
         while True:
             try:
                 view = input('Would you like to view individual trip data? Type \'yes\' or \'no\'.').lower()
                 if view == 'yes':
                     data = pd.read_csv(CITY_DATA[city])
-                    print(data[startrow:endrow])
-                    startrow += 5
+                    print(data[start_row:endrow])
+                    start_row += 5
                     endrow += 5
                 elif view == 'no':
                     break
